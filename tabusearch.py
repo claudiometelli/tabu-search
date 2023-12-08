@@ -90,6 +90,7 @@ def tabu_search():
         if len(tabu_moves) > TABU_TENURE:
             tabu_moves.pop(0)
         print(f"Best sequence found at iteration {i+1}: {actual_sequence} with value: {tot_value(actual_sequence)}. Tabu list: {tabu_moves}")
+        # print(f"{i+1} & {str(actual_sequence).replace('[','').replace(']','')} & {tot_value(actual_sequence)} & {str(tabu_moves).replace('[','').replace(']','')} \\\\")
 
     print(f"Best sequence found after {ITERATIONS} iterations: {best_solution[0]}, with value: {best_solution[1]}")
 

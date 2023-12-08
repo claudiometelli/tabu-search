@@ -2,6 +2,12 @@ from itertools import permutations
 from tabusearch import ITERATIONS, tot_value, neighborhood
 
 def greedy_ls(seq):
+    """
+    Simple local search implmentation
+    params:
+    - seq: list of integer numbers from 1 to n with n=len(seq) that represents a sequence of jobs
+    return value: value of the objective function with the sequece seq
+    """
     best_sequence, best_value = seq, tot_value(seq)
     iterations = 0
     while True:
